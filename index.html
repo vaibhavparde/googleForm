@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Form</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Add Font Awesome CDN for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Form Builder Section -->
+    <div id="form-builder">
+      <h2>Google Form</h2>
+      <input type="text" id="question-label" placeholder="Enter question label" />
+      <select id="question-type">
+        <option value="text">Text Input</option>
+        <option value="multiple-choice">Multiple Choice</option>
+        <option value="checkbox">Checkboxes</option>
+      </select>
+      <div id="options-container" class="hidden">
+        <input type="text" id="options-input" placeholder="Enter options (comma separated)" />
+      </div>
+      <button id="add-question">Add Question</button>
+      <button id="export-form">Export Form</button>
+      <br/><br/>
+      <div id="form-preview"></div>
+    </div>
+
+    <!-- Form Submission Section -->
+    <div id="form-submit" class="hidden">
+      <h2>Fill out the Form</h2>
+      <form id="submit-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./dist/app.js"></script>
+</body>
+</html>
